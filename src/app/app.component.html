@@ -1,0 +1,26 @@
+<div class="content">
+  <p>This demo uses sample data by default, but you can swap out the dummy key in the JavaScript code window with one of your own to use real data.</p>
+  <div class="fieldWrap">
+    <input type="text" name="search" class="searchInput" #searchBox placeholder="Enter Address" (change)="showClear()" (keypress)="enterSearch()">
+    <button (click)="findAddress()">Search</button>
+    <button class="clear" id="clearButton" (click)="clearSearch()">X</button>
+  </div>
+  
+  <div class="fieldWrap">
+    <div class="error">{{errorMessage}}</div>
+  </div>
+  
+  <div class="fieldWrap">
+    <div id="result"></div>
+  </div>  
+  
+  <div class="seperator" id="seperator"></div> 
+  
+  <div class="fieldWrap">
+    <div class="outputArea" id="output"></div>
+  </div>
+  
+</div>
+
+
+<router-outlet></router-outlet>
